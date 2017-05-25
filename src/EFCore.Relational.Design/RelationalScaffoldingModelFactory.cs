@@ -94,7 +94,11 @@ namespace Microsoft.EntityFrameworkCore.Scaffolding
 
             VisitDatabaseModel(modelBuilder, databaseModel);
 
-            return modelBuilder.Model;
+            var model = modelBuilder.Model;
+
+            model.AddAnnotations(databaseModel.GetAnnotations());
+
+            return model;
         }
 
         protected virtual string GetEntityTypeName([NotNull] TableModel table)

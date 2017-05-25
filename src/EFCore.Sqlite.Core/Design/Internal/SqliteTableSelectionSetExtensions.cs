@@ -3,8 +3,9 @@
 
 using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore.Scaffolding;
 
-namespace Microsoft.EntityFrameworkCore.Scaffolding.Internal
+namespace Microsoft.EntityFrameworkCore.Design.Internal
 {
     internal static class SqliteTableSelectionSetExtensions
     {
